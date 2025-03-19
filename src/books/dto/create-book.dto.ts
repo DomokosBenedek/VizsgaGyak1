@@ -1,5 +1,4 @@
 export class CreateBookDto {
-    id: number;
     title: string;
     autrhor: string;
     publish_year: number;

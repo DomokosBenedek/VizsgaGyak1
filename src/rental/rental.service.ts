@@ -5,22 +5,26 @@ import { UpdateRentalDto } from './dto/update-rental.dto';
 @Injectable()
 export class RentalService {
   create(createRentalDto: CreateRentalDto) {
-    return 'This action adds a new rental';
+    return createRentalDto;
   }
 
   findAll() {
-    return `This action returns all rental`;
+    return this.findAll();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} rental`;
+    return this.findOne(id);
   }
 
   update(id: number, updateRentalDto: UpdateRentalDto) {
-    return `This action updates a #${id} rental`;
+    return this.update(id, updateRentalDto);
   }
 
   remove(id: number) {
-    return `This action removes a #${id} rental`;
+    try{
+      return this.remove(id);
+    }catch(error){
+      return {error:error.message};
+    };
   }
 }
